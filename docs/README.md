@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: '粉丝的个人博客'
+heroText: '神奇的个人博客'
 bgImage: '/img/5.jpg'
 bgImageStyle: {
   height: '350px'
