@@ -1,9 +1,9 @@
 ---
 home: true
 heroText: '神奇的个人博客'
-bgImage: '/img/5.jpg'
+bgImage: '/img/background.png'
 bgImageStyle: {
-  height: '350px'
+  height: '450px'
 }
 # faceImage: '/head.png'
 # heroImage: '/hero_white.png'
@@ -15,8 +15,8 @@ bgImageStyle: {
 #   boxShadow: '0 5px 18px rgba(0,0,0,0.5)'
 # }
 isShowTitleInHome: true
-actionText: About Me
-actionLink: /views/personalInfo/
+# actionText: About Me
+# actionLink: /views/personalInfo/
 features:
 - title: Who am I？
   details: A programmer? A human being? Or a matter combination?

@@ -8,7 +8,7 @@ yarn docs:build
 rm -rf ../blog/dist/*
 
 # 将build生成的dist目录拷贝至上一层目录中
-cp -rf dist ../blog/	
+cp -rf dist ../blog/
 
 # 进入生成的文件夹
 cd ../blog/dist

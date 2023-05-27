@@ -4,21 +4,21 @@ const sidebarConf = require('./config/sidebar')
 const pluginsConf = require('./config/plugins/index')
 module.exports = {
     //注意，此处需要填写你部署在nginx下的文件夹名称，如果是根目录，那么可以注释掉此行，注释掉后本地打开index.html无法访问
-    base: "/dist/",
+    // base: "/dist/",
     title: "myblog",
     description: '点赞、转发、收藏',
+    // build生成目录
     dest: './dist',
     port: '7777',
     head: [
-        ['link', { rel: 'icon', href: '/img/favicon.ico' }],
-        ['meta', { name: 'keywords', content: '君哥聊编程,vuepress,自建博客,君哥' }],
-        ['meta', { name: 'description', content: '专属于自学者的在线学习平台,这里有编程领域最完善最「体系化的」Java学习视频、如果你是小白快加入我们一起学最全最「体系化的」java知识吧，官方交流QQ群：827553720' }],
+        ['link', { rel: 'icon', href: '/img/bike.png' }],
+        ['meta', { name: 'keywords', content: 'vuepress,自建博客' }],
+        ['meta', { name: 'description', content: '专属于自学者的在线学习平台' }],
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ["meta", { name: "robots", content: "all" }],
-        ["meta", { name: "author", content: "君哥" }],
-        ["link", { rel: "stylesheet", href: "/css/style.css" }],//显示nav小logo
+        ["meta", { name: "author", content: "cc" }],
         ["script", { charset: "utf-8", src: "/js/custom.js" }],//加载右侧菜单栏图片
-        // 百度统计
+        // 百度统计，需要注册，百度会帮你统计日访问量，月访问量
         /*
         ['script', {}, `
             var _hmt = _hmt || [];
@@ -34,6 +34,7 @@ module.exports = {
     theme: 'reco',
     themeConfig: {
         type: 'blog',
+        logo: '/img/shan.png',
         smoothScroll: true,
         // 博客设置
         /*
@@ -58,9 +59,9 @@ module.exports = {
             visitor:true,
         },
         */
-        authorAvatar: '/avatar.png',
+        authorAvatar: '/img/avatar.png',
         // 最后更新时间
-        lastUpdated: '2021-04-07', // string | boolean
+        lastUpdated: 'Last Updated', // string | boolean
         //repo: 'it235',
         // 如果你的文档不在仓库的根部
         //docsDir: 'docs',
@@ -69,14 +70,15 @@ module.exports = {
         //editLinks: true,
         //editLinkText: '在 GitHub 上编辑此页！',
         // 作者
-        author: '君哥',
+        author: 'cc',
         // 项目开始时间
-        startYear: '2022',
+        startYear: '2023',
         nav: navConf,
         sidebar: sidebarConf,
         sidebarDepth: 2,
         // 自动形成侧边导航
         sidebar: 'auto',
+        subSidebar: 'auto',
         // logo: '/head.png',
         // 搜索设置
         search: true,
@@ -90,21 +92,23 @@ module.exports = {
         //友链
         friendLink: [
             {
-                title: '君哥聊编程',
+                title: 'myblok',
                 desc: 'Enjoy when you can, and endure when you must.',
-                email: 'xxx@qq.com',
-                link: 'https://www.it235.com'
-            },
-            {
-                title: '君哥的课堂',
-                desc: '君哥的课堂',
-                avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-                link: 'https://how.ke.qq.com/'
+                email: '206214729@qq.com',
+                link: '_black'
             },
         ]
     },
     markdown: {
-        lineNumbers: true
+        lineNumbers: true,
+        extendMarkdown: md => {
+            md.use(require("markdown-it-disable-url-encode"));
+        }
     },
-    plugins: pluginsConf
+    plugins: pluginsConf,
+    locales: {
+        '/': {
+            lang: 'zh-CN'
+        }
+    }
 }

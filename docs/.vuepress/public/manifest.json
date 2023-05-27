@@ -1,10 +1,10 @@
 {
-  "name": "君哥聊編程",
-  "short_name": "君哥",
+  "name": "myblog",
+  "short_name": "Jungle ",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#2196f3",
-  "description": "君哥聊編程主页",
+  "description": "myblog首页",
   "theme_color": "blue",
   "icons": [
     {

@@ -1,0 +1,1 @@
+export default ({ siteData, options }) => { siteData.themeConfig.sidebar = {"/我的文章/vuepress/":[{"title":"vuepress","collapsable":false,"sidebarDepth":1,"children":["侧边栏","图片显示","官方插件使用","插件看板娘"]}],"/我的文章/typora/":[{"title":"typora","collapsable":false,"sidebarDepth":1,"children":["安装pandoc"]}]} }
